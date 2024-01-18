@@ -19,11 +19,12 @@ model Course {
   imageUrl String? @db.Text
   price Float?
   isPublished Boolean @default(false)
-  categoryId   String?  
+  categoryId   String? 
+  category     Category?   @relation(fields: [categoryId], references: [id]) 
   attachments Attachment[]
   createdAt DateTime @default(now())
   updatedAt DateTime @updatedAt
-     category     Category?   @relation(fields: [categoryId], references: [id])
+     
      @@index([categoryId])
 }
 model Category {
@@ -33,7 +34,7 @@ model Category {
 }
 
 model Attachment {
-   id    Int     @id @default(autoincrement())
+   id    String     @id @default(cuid())
   name String
   url String @db.Text
 
