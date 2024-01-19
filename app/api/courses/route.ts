@@ -2,9 +2,7 @@ import { db } from "@/lib/db";
 import { auth } from "@clerk/nextjs";
 import { NextResponse } from "next/server";
 
-export async function POST(req: {
-  json: () => PromiseLike<{ title: any }> | { title: any };
-}) {
+export async function POST(req: any) {
   try {
     const { userId } = auth();
     const { title } = await req.json();

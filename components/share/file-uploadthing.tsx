@@ -39,8 +39,8 @@ export function FileUploader({
       <input {...getInputProps()} className="cursor-pointer" />
 
       {imageUrl ? (
-        <div className="flex h-full w-full flex-row-reverse  justify-center ">
-          <div className="pl-4 flex h-full flex-col items-center   text-grey-500">
+        <div className="flex h-full w-full flex-row-reverse gap-x-4  justify-center items-center">
+          <div className="flex h-full flex-col items-center   text-grey-500 pt-10">
             <Image
               src="/icons/upload.svg"
               width={77}
@@ -53,16 +53,19 @@ export function FileUploader({
               Select from computer
             </Button>
           </div>
-          <Image
-            src={imageUrl}
-            alt="image"
-            width={100}
-            height={100}
-            className="w-[100%] object-contain object-center"
-          />
+
+          <div className="flex justify-center gap-4 bg-slate-300  rounded-lg">
+            <Image
+              src={imageUrl}
+              alt="image"
+              width={200}
+              height={200}
+              className="w-full object-contain object-center rounded-md"
+            />
+          </div>
         </div>
       ) : (
-        <div className="flex-center flex-col py-5 text-grey-500">
+        <div className="pl-4 flex h-full flex-col items-center   text-grey-500">
           <Image
             src="/icons/upload.svg"
             width={77}
