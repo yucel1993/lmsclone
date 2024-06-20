@@ -82,8 +82,7 @@ body,
 }
 
 .ql-container {
-  font-size: 17px !important;
-  /*  This one for the editor  you can make it bigger or smaller */
+  font-size: 1rem !important;
 }
 
-@import "~@uploadthing/react/styles.css";
+@import '~@uploadthing/react/styles.css';

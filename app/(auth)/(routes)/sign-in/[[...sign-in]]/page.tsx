@@ -1,5 +1,7 @@
-import { SignIn } from "@clerk/nextjs";
+import { SignIn } from '@clerk/nextjs';
 
-export default function Page() {
-  return <SignIn />;
-}
+const Page = () => {
+  return <SignIn routing="hash" fallbackRedirectUrl={'/'} />;
+};
+
+export default Page;

@@ -1,9 +1,10 @@
-import NavbarRoutes from "@/components/share/navbar-routes";
-import MobileSidebar from "./MobileSidebar";
+import React from 'react';
+import MobileSidebar from './mobile-sidebar';
+import NavbarRoutes from '@/components/shared/navbar-routes';
 
 const Navbar = () => {
   return (
-    <div className="p-4 border-b h-full flex items-center bg-white shadow-sm">
+    <div className="flex h-full border-b bg-white p-4 shadow-sm">
       <MobileSidebar />
       <NavbarRoutes />
     </div>
@@ -11,4 +12,3 @@ const Navbar = () => {
 };
 
 export default Navbar;
-<div></div>;
